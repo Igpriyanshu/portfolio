@@ -220,6 +220,45 @@
             font-size: 1.15rem;
             flex-shrink: 0;
         }
+        /* Glass Buttons Styling */
+.btn-contact-glass {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.65rem 1.4rem;
+    border-radius: 50px;
+    font-weight: 500;
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-contact-glass:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-contact-glass.btn-active {
+    background: linear-gradient(135deg, #e75ad9 0%, #a855f7 100%);
+    border: none;
+}
+
+.btn-contact-glass.btn-active:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+}
+
+@media (max-width: 576px) {
+    .btn-contact-glass {
+        width: 100%;
+        justify-content: center;
+    }
+}
     </style>
 </head>
 <body>
@@ -476,20 +515,41 @@
         </div>
     </section>
 
-    <!-- Contact & Footer -->
-    <section id="contact" class="py-5 text-center">
-        <div class="container">
-            <div class="glass-card p-4 p-md-5">
-                <h2 class="fw-bold mb-2">Let's Connect</h2>
-                <p class="mb-4">Open for web development projects and technical opportunities.</p>
-                <div class="d-flex justify-content-center gap-3">
-                    <a href="mailto:sutharpriyanshu56@gmail.com" class="btn btn-gradient"><i class="fa-solid fa-envelope me-2"></i>Email Me</a>
-                    <a href="https://github.com/Igpriyanshu" target="_blank" class="btn btn-outline-custom"><i class="fa-brands fa-github me-2"></i>GitHub</a>
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-9">
+                <!-- Glass Container Card -->
+                <div class="glass-card text-center p-4 p-md-5 rounded-4">
+                    <h2 class="fw-bold text-white mb-2">Let's Connect</h2>
+                    <p class="text-secondary mb-4 mx-auto" style="max-width: 550px;">
+                        Open for web development projects and technical opportunities.
+                    </p>
+
+                    <!-- Responsive Buttons Grid -->
+                    <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
+                        <a href="https://www.linkedin.com/in/priyanshu-suthar-2b47a2321" target="_blank" class="btn btn-contact-glass">
+                            <i class="fa-brands fa-linkedin me-2"></i>LinkedIn
+                        </a>
+
+                        <a href="mailto:sutharpriyanshu56@gmail.com" class="btn btn-contact-glass btn-active">
+                            <i class="fa-solid fa-envelope me-2"></i>Email Me
+                        </a>
+
+                        <a href="https://github.com/Igpriyanshu" target="_blank" class="btn btn-contact-glass">
+                            <i class="fa-brands fa-github me-2"></i>GitHub
+                        </a>
+
+                        <a href="https://www.instagram.com/_.ipriyanshu?stkn=MWRuOHkwYTJveXNkOA==" target="_blank" class="btn btn-contact-glass">
+                            <i class="fa-brands fa-instagram me-2"></i>Instagram
+                        </a>
+                    </div>
                 </div>
             </div>
-            <p class="small mt-4 mb-0" style="color: var(--text-muted);">© 2026 Priyanshu Suthar. All rights reserved.</p>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- JS Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
